@@ -7,7 +7,8 @@ app.set("views", "./views");
 app.set("view engine", "ejs");
 
 app.get("/home", (req, res)=> {
-  res.render("index");
+  const name = "Todd";
+  res.render("index", {name});
 });
 
 app.listen(PORT, ()=>{
